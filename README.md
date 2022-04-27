@@ -1,4 +1,4 @@
-# Equipement Management System
+# Equipment Management System
 
 ## Purpose of this project
 * Develop a complete REST API with the connection using token authorization
