@@ -8,7 +8,7 @@
 
 * [Requirements](#requirements)
 * [Schema](#schema)
-* [API] (#api)
+* [API](#api)
 
 ## Local setup
 
