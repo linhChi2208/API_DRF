@@ -1,6 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticatedOrReadOnly,IsAuthenticated
+from rest_framework.authentication import TokenAuthentication
 from rest_framework import status
 from rest_framework import generics
 
@@ -12,7 +13,8 @@ from core.api.paginations import CustomPagination
 
 
 class CategoriesList(generics.ListCreateAPIView):
-  permission_classes = [IsAuthenticatedOrReadOnly]
+  authentication_classes = (TokenAuthentication,)
+  permission_classes = (IsAuthenticated,)
   queryset = Categories.objects.all()
   serializer_class = CategoriesSerializer
   pagination_class = CustomPagination
@@ -20,7 +22,8 @@ class CategoriesList(generics.ListCreateAPIView):
   filterset_fields = ['parent__id']
 
 class CategoriesDetails(APIView):
-  permission_classes = [IsAuthenticated]
+  authentication_classes = (TokenAuthentication,)
+  permission_classes = (IsAuthenticated,)
 
 
   def get(self, request, pk):
@@ -51,7 +54,8 @@ class CategoriesDetails(APIView):
 
 
 class EquipementsList(generics.ListCreateAPIView):
-  permission_classes = [IsAuthenticated]
+  authentication_classes = (TokenAuthentication,)
+  permission_classes = (IsAuthenticated,)
 
   serializer_class = EquipementsSerializer
   pagination_class = CustomPagination
@@ -72,7 +76,8 @@ class EquipementsList(generics.ListCreateAPIView):
 
 
 class EquipementsDetails(APIView):
-  permission_classes = [IsAuthenticated]
+  authentication_classes = (TokenAuthentication,)
+  permission_classes = (IsAuthenticated,)
   
   def get(self, request, pk):
     try: 
