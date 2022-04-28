@@ -1,4 +1,4 @@
-# Equipement Management System
+# Equipment Management System
 
 ## Purpose of this project
 * Develop a complete REST API with the connection using token authorization
@@ -34,14 +34,14 @@
       * equipements:
         * categories(multiple)
         * quantite (type "range" with "quantity_min" & "quantity_max")
-    * Create
-      * Each filed should be allowed to be written
-    * Update
-      * Each filed should be allowed to be updated
-    * Update
-      * Each filed should be allowed to be deleted
-    * Retrieve
-      * Return "detailed" children serializers. For example, the field "categories" is 1 object of details of this categories (name, slug, etc).
+  * Create
+     * Each filed should be allowed to be written
+   * Update
+     * Each filed should be allowed to be updated
+   * Update
+     * Each filed should be allowed to be deleted
+   * Retrieve
+     * Return "detailed" children serializers. For example, the field "categories" is 1 object of details of this categories (name, slug, etc).
 
 ## Schema
 
